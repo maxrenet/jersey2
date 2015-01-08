@@ -1,0 +1,75 @@
+
+INFO:
+
+Restful services:
+
+JAX-RS: Java API for RESTful Web Services (JAX-RS), is a set if APIs to developer REST service. 
+JAX-RS is part of the Java EE6, and make developers to develop REST web application easily.
+
+Jersey: Jersey is the open source, production quality, JAX-RS (JSR 311) 
+
+Jersey provides an API so that developers may extend Jersey to suit their needs.
+
+Source of the code implemented here:
+
+How to build RESTful Service with Java using JAX-RS and Jersey (Example)
+
+http://crunchify.com/how-to-build-restful-service-with-java-using-jax-rs-and-jersey/
+
+How to Create RESTful Java Client With Jersey Client – Example
+
+http://crunchify.com/how-to-create-restful-java-client-with-jersey-client-example/
+
+
+
+JAX-RS provides some annotations to aid in mapping a resource class (a POJO) as a web resource. 
+The annotations include:
+
+@Path specifies the relative path for a resource class or method.
+@GET indicates that the following method will answer to a HTTP GET request.
+@PUT indicates that the following method will answer to a HTTP PUT request.
+@POST indicates that the following method will answer to a HTTP POST request.
+@DELETE and @HEAD specify the HTTP request type of a resource.
+@Produces specifies the response MIME media types.
+@Consumes specifies the accepted request media types.
+In addition, it provides further annotations to method parameters to pull information out of the request. All the @*Param annotations take a key of some form which is used to look up the value required.
+
+@PathParam binds the parameter to a path segment.
+@QueryParam binds the parameter to the value of an HTTP query parameter.
+@MatrixParam binds the parameter to the value of an HTTP matrix parameter.
+@HeaderParam binds the parameter to an HTTP header value.
+@CookieParam binds the parameter to a cookie value.
+@FormParam binds the parameter to a form value.
+@DefaultValue specifies a default value for the above bindings when the key is not found.
+@Context returns the entire context of the object. Ex.(@Context HttpServletReq
+
+------------------------------------------------------------------------------------------
+TO TEST:
+
+
+I. returns html:
+
+A)	http://localhost:8080/SimpleRESTJerseyExample/simple/ctofservice 
+
+B)	http://localhost:8080/SimpleRESTJerseyExample/simple/ctofservice/18
+	
+	
+	
+II. returns json ( Does not work with internal Eclipse browser)
+
+
+A)	http://localhost:8080/SimpleRESTJerseyExample/simple/ftocservice 
+
+B)	http://localhost:8080/SimpleRESTJerseyExample/simple/ftocservice/18
+	
+	@Produces("application/json") Output: 
+	F to C Converter Output: 
+	{"F Value":18,"C Value":-7.777777671813965}
+	
+	
+	
+III. Service which displays incoming JSON
+
+	http://localhost:8080/SimpleRESTJerseyExample/simple/displayJSONFromClientService
+	
+		
