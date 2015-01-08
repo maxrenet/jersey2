@@ -19,7 +19,8 @@ public class DisplayJSONFromClientService {
 	    
 	    @Path("/displayJSONFromClientService")
 	    
-	    @Consumes(MediaType.APPLICATION_JSON)  //   !!! MARKS THE CONSUMER OF JSON METHOD
+	    // @Consumes specifies the accepted request media types.
+	    @Consumes(MediaType.APPLICATION_JSON) 
 	    
 	    public Response displayJSON(InputStream incomingData) {
 	    	

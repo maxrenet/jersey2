@@ -13,6 +13,7 @@ public class FtoCService {
  
 	  @GET
 	  
+	  //@Produces specifies the response MIME media types.
 	  @Produces("application/json")  // RESULT RETURNED AS JSON
 	  
 	  public Response convertFtoC() throws JSONException {
